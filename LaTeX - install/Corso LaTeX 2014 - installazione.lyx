@@ -861,7 +861,15 @@ MacOS
 
 \begin_deeper
 \begin_layout Standard
-MacOS deve morire male e questa parte la scriverà qualcun altro.
+Esiste una versione anche per il mondo Apple, si vedano i dettagli alla
+ pagina 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "enu:mactex"
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -1008,6 +1016,27 @@ status open
 \begin_layout Plain Layout
 
 http://tug.org/texlive/Images/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:mactex"
+
+\end_inset
+
+
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://tug.org/mactex/
 \end_layout
 
 \end_inset
