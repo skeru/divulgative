@@ -1,0 +1,970 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usetheme{Madrid}
+\usefonttheme{serif}
+% \usecolortheme{crane} %GIALLA
+% more colors & themes http://www.hartwork.org/beamer-theme-matrix/
+
+\setbeamercovered{transparent}
+% transizioni: gli elementi nascosti vengono visualizzati in trasparenza
+
+%\beamerdefaultoverlayspecification{<+->}
+% transizioni: di default i paragrafi e gli elenchi (puntati e numerati) vengono scoperti passo per passo.
+% usate con cautela
+
+\usenavigationsymbolstemplate{}
+% hide navigation symbols (bottom-right corner in every slide)
+
+\titlegraphic{\includegraphics[height=2cm]{poul-logo.pdf}}
+% Aggiunge il logo del POuL in prima pagina
+% Ricordate che dovete sempre avere il logo in pdf nella cartella dove avete il documento (poul-logo.pdf)
+
+\IfFileExists{lmodern.sty}{\usepackage{lmodern}}{}
+% sets nice fonts (if available)
+
+% inserisce AUTOMATICAMENTE una slide di titolo sezione all'inizio di OGNI sezione: in questa slide viene visualizzato l'indice delle sezioni, evidenziata quella corrente.
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>
+    \frametitle{Sezione \thesection}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+% ridefinisce il footer per evitare di includere \institute tra () accanto al nome
+% LyX 2.1 pare abbia risolto questo bug. Lascio questo codice commentato, rimane utile per nascondere forzatamente \institute dal pedice nel caso si desiderasse aggiungerlo in seguito
+% fonte: http://tex.stackexchange.com/questions/35166/how-can-i-remove-the-institute-from-the-author-footline-on-beamer
+%\setbeamertemplate{footline}
+%{
+%  \leavevmode%
+%  \hbox{%
+%  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+%    \usebeamerfont{author in head/foot}\insertshortauthor%~~\beamer@ifempty{\insertshortinstitute}{}{(\insertshortinstitute)}
+ % \end{beamercolorbox}%
+ % \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+%    \usebeamerfont{title in head/foot}\insertshorttitle
+%  \end{beamercolorbox}%
+%  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+%    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+%    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+%  \end{beamercolorbox}}%
+%  \vskip0pt%
+%}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language italian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Installazione del framework LaTeX
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Installazione
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subtitle
+Prima di venire in aula
+\end_layout
+
+\begin_layout Author
+Stefano Cherubin, Aurelio Montalto
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+href{mailto:nevertrust.pdflinks@mailinator.com}{
+\backslash
+nolinkurl{stefano1.cherubin@mail.polimi.it}}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+href{mailto:nevertrust.pdflinks@mailinator.com}{
+\backslash
+nolinkurl{aurelio.montalto@gmail.com}}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Cherubin, Montalto
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Date
+Corso LaTeX 2014
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Logistica
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+L'evento è 
+\series bold
+gratuito
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\emph on
+Non è richiesta alcuna registrazione
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+\align block
+La parte pratica sarà centrale.
+ 
+\bar under
+Avere con sé un computer
+\bar default
+ per provare quanto verrà mostrato 
+\bar under
+è consigliato ma non obbligatorio
+\bar default
+.
+ L'aula assegnata fornisce prese di corrente ai banchi.
+\end_layout
+
+\begin_layout Standard
+\align center
+La durata prevista di ogni incontro è di circa 2 ore.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Compiti per casa
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align block
+Vi chiediamo di installare l'ambiente LaTeX prima di presentarvi in aula.
+\end_layout
+
+\begin_layout Standard
+\align center
+Perché?
+\end_layout
+
+\begin_layout Standard
+\align block
+Perché l'installazione richiede il download di pacchetti 
+\begin_inset Quotes eld
+\end_inset
+
+pesanti
+\begin_inset Quotes erd
+\end_inset
+
+ e non possiamo garantire che la rete wi-fi disponibile in aula consenta
+ una installazione rapida durante l'evento.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Quindi devi...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+Ommioddio cosa devo fare?
+\begin_inset Newline newline
+\end_inset
+
+No ma io nonsonocapaceesepoinonfunzionaadessorompoilcomput...
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Standard
+\align center
+STAI CALMO
+\begin_inset Newline newline
+\end_inset
+
+te lo spieghiamo noi
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Framework LaTeX
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Devi sapere che...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+È un sistema tipografico, più complesso di un comune word processor
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+per questo è così pesante
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Esistono implementazioni open source
+\end_layout
+
+\begin_layout Itemize
+Esiste per diversi sistemi operativi
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+anche per i più buffi
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Scarica e installa una distribuzione LaTeX
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+nelle prossime slide le istruzioni dettagliate per i sistemi operativi più
+ comuni
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+GNU/Linux -> TeXlive
+\end_layout
+
+\begin_layout Itemize
+Windows -> TeXlive
+\end_layout
+
+\begin_layout Itemize
+MacOS -> MacTeX
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Ubuntu
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Framework
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+sudo apt-get install texlive-full
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Editor di codice
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Come editor di codice si consiglia gedit, procurati allora il plugin apposito
+\end_layout
+
+\begin_layout LyX-Code
+sudo apt-get install gedit-latex-plugin
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Per altri sistemi GNU/Linux o altri editor di codice, dai uno sguardo qui
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "UbuntuWiki"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Windows (1/3)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Scaricare il file di installazione da 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "enu:iso_windows"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Il file è di grosse dimensioni (2,5 GB): è fortemente raccomandato di utilizzare
+ una connessione veloce e non "a consumo".
+ 
+\end_layout
+
+\begin_layout Itemize
+Se il file di download non fosse disponibile, scaricare il file dal nome
+ terminante in .iso dalla pagina 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "enu:iso_page_win"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Se si utilizza un sistema Windows recente (7, 8 o 8.1), passare direttamente
+ al punto successivo.
+ Altrimenti, installare ed utilizzare un software gratuito come: WinCDEmu,
+ daemon-tools o Magic ISO (per l'installazione si faccia riferimento alle
+ guide dedicate).
+\end_layout
+
+\begin_layout Itemize
+Cliccare sul file ISO scaricato al punto 1 e si aprirà la cartella TexLive2014.
+\end_layout
+
+\begin_layout Itemize
+Cliccare sul file install-tl-windows.bat
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Windows (2/3)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Dopo qualche secondo si apriranno due schermate: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+una del Prompt dei comandi (sfondo nero con scritte bianche, IGNORARLA!);
+ 
+\end_layout
+
+\begin_layout Itemize
+una a sfondo grigio con un laterale azzuro con la scritta TEXLIVE 2014 (AGIRE
+ SOLO SU QUESTA).
+ 
+\end_layout
+
+\begin_layout Itemize
+Da questo punto si agirà solo sulla schermata a sfondo grigio.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Cliccare sul pulsante Avanti.
+\end_layout
+
+\begin_layout Itemize
+Nella nuova schermata (dopo qualche momento di elaborazione), cliccare sul
+ pulsante Avanti.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Windows (3/3)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Nella schermata selezionare (se già non lo fosse): 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Formato pagina predefinito: A4, 
+\end_layout
+
+\begin_layout Itemize
+Aggiungi le scorciatoie da menu (segno di spunta presente), 
+\end_layout
+
+\begin_layout Itemize
+Installa il programma TeXworks (segno di spunta presente).
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Quindi cliccare sul pulsante Avanti.
+\end_layout
+
+\begin_layout Itemize
+Nella nuova schermata, cliccare sul pulsante Installa.
+\end_layout
+
+\begin_layout Itemize
+Comparirà una schermata con sfondo bianco con tutti i pacchetti di installazione
+ in ordine alfabetico.
+ Aspettare il termine di tutte le installazioni.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+L 'operazione può richiedere anche un'ora.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Ad installazione completata, cliccare sul pulsante Fine.
+ Sulla schermata a sfondo nera e scritte bianche, premere un tasto qualsiasi
+ per terminare 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Le finestre si chiuderanno automaticamente.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Windows (opzionale)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Aggiornamento
+\end_layout
+
+\begin_layout Itemize
+È necessaria una connessione internet per tutta la durata del processo di
+ aggiornamento.
+\end_layout
+
+\begin_layout Itemize
+Su Windows 7: cliccare su START di WINDOWS --> Tutti i programmi --> Tex
+ Live 2014 --> TeX Live Manager 2014.
+ Su Windows 8 e 8.1: cliccare su START di WINDOWS, poi digitare sulla tastiera
+ Tex Live Manager ed infine premere il tasto INVIO della tastiera.
+\end_layout
+
+\begin_layout Itemize
+Nella finestra che si apre, cliccare sul pulsante Seleziona tutti (tutti
+ i pacchetti in lista mostreranno al lato il segno di spunta).
+\end_layout
+
+\begin_layout Itemize
+Cliccare sul pulsante Aggiorna.
+ Nella finestra di dialogo compariranno le informazioni sullo stato dei
+ pacchetti in aggiornamento in ordine alfabetico.
+ L'operazione di aggiornamento può richiedere parecchio tempo.
+\end_layout
+
+\begin_layout Itemize
+Al termine del processo, chiudere la finestra.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+MacOS
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+MacOS deve morire male e questa parte la scriverà qualcun altro.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Section*
+Appendice
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Fonti
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+Link utili
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "UbuntuWiki"
+
+\end_inset
+
+
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://wiki.ubuntu-it.org/Ufficio/Latex
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:iso_windows"
+
+\end_inset
+
+
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://ctan.mirror.garr.it/mirrors/CTAN/systems/texlive/Images/texlive2014-20140525.
+iso
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:iso_page_win"
+
+\end_inset
+
+
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://tug.org/texlive/Images/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Section*
+Licenza
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Fine
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+
+\size largest
+Grazie per la collaborazione!
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Se volete cambiare licenza cambiate l'immagine e la scritta sotto
+\end_layout
+
+\begin_layout Plain Layout
+si consiglia di consultare http://creativecommons.org/ e http://creativecommons.or
+g/about/downloads per le immagini (possibilmente vettoriali)
+\end_layout
+
+\begin_layout Plain Layout
+ricordate di configurare inkscape per le immagini vettoriali (se non lo
+ avete già fatto - e voi lo avete già fatto, vero?!)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename by-sa.svg
+	height 0.9cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size footnotesize
+Queste slides sono licenziate Creative Commons Attribution-ShareAlike 4.0
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.poul.org
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
