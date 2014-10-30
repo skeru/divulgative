@@ -149,7 +149,7 @@ Prima di venire in aula
 \end_layout
 
 \begin_layout Author
-Stefano Cherubin, Aurelio Montalto
+Stefano Cherubin
 \begin_inset Newline newline
 \end_inset
 
@@ -168,27 +168,12 @@ nolinkurl{stefano1.cherubin@mail.polimi.it}}
 
 \end_inset
 
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-href{mailto:nevertrust.pdflinks@mailinator.com}{
-\backslash
-nolinkurl{aurelio.montalto@gmail.com}}
-\end_layout
-
-\end_inset
-
 
 \begin_inset Argument 1
 status open
 
 \begin_layout Plain Layout
-Cherubin, Montalto
+Stefano Cherubin
 \end_layout
 
 \end_inset
@@ -198,6 +183,53 @@ Cherubin, Montalto
 
 \begin_layout Date
 Corso LaTeX 2014
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Benvenuti
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+Questa presentazione è redatta in supporto all'evento organizzato dal POuL:
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+Corso LaTeX 2014
+\emph default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Di seguito troverete
+\end_layout
+
+\begin_layout Itemize
+informazioni di carattere generale sul corso 
+\end_layout
+
+\begin_layout Itemize
+una guida per novizi all'installazione degli strumenti software che saranno
+ utilizzati durante il corso.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
 \end_layout
 
 \begin_layout Frame
@@ -249,7 +281,11 @@ Avere con sé un computer
 
 \begin_layout Standard
 \align center
-La durata prevista di ogni incontro è di circa 2 ore.
+L'evento si compone di 4 incontri.
+\begin_inset Newline newline
+\end_inset
+
+La durata prevista di ogni incontro è di poco meno di 2 ore.
 \end_layout
 
 \end_deeper
@@ -470,7 +506,7 @@ sudo apt-get install texlive-full
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Pause
 
 \end_layout
 
@@ -533,26 +569,20 @@ Windows (1/3)
 
 \begin_deeper
 \begin_layout Itemize
-Scaricare il file di installazione da 
+Scaricare il file di installazione dal link diretto 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "enu:iso_windows"
 
 \end_inset
 
-
+ (2,5 GB)
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Il file è di grosse dimensioni (2,5 GB): è fortemente raccomandato di utilizzare
- una connessione veloce e non "a consumo".
+Se il file di download non fosse disponibile, fare riferimento alla pagina
  
-\end_layout
-
-\begin_layout Itemize
-Se il file di download non fosse disponibile, scaricare il file dal nome
- terminante in .iso dalla pagina 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "enu:iso_page_win"
@@ -564,15 +594,32 @@ reference "enu:iso_page_win"
 
 \end_deeper
 \begin_layout Itemize
-Se si utilizza un sistema Windows recente (7, 8 o 8.1), passare direttamente
- al punto successivo.
- Altrimenti, installare ed utilizzare un software gratuito come: WinCDEmu,
- daemon-tools o Magic ISO (per l'installazione si faccia riferimento alle
- guide dedicate).
+Assicuratevi di essere in grado di caricare un file immagine ISO con gli
+ strumenti che avete.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Altrimenti, alcuni software gratuito sono:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+daemon-tools
 \end_layout
 
 \begin_layout Itemize
-Cliccare sul file ISO scaricato al punto 1 e si aprirà la cartella TexLive2014.
+Magic ISO
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+
+\emph on
+Montare
+\emph default
+ il file ISO scaricato e si aprire quindi la cartella TexLive2014.
 \end_layout
 
 \begin_layout Itemize
@@ -604,18 +651,28 @@ Dopo qualche secondo si apriranno due schermate:
 
 \begin_deeper
 \begin_layout Itemize
-una del Prompt dei comandi (sfondo nero con scritte bianche, IGNORARLA!);
- 
+Prompt dei comandi sullo sfondo (testo bianco su sfondo nero)
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
-una a sfondo grigio con un laterale azzuro con la scritta TEXLIVE 2014 (AGIRE
- SOLO SU QUESTA).
- 
+IGNORARLA!
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
-Da questo punto si agirà solo sulla schermata a sfondo grigio.
+finestra di installazione dal titolo TEXLIVE 2014 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+AGIRE SOLO SU QUESTA
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Da questo punto si agirà solo sulla schermata di installazione a sfondo
+ grigio.
 \end_layout
 
 \end_deeper
@@ -648,7 +705,8 @@ Windows (3/3)
 
 \begin_deeper
 \begin_layout Itemize
-Nella schermata selezionare (se già non lo fosse): 
+Nella schermata successiva selezionare (o controllare che sia selezionato):
+ 
 \end_layout
 
 \begin_deeper
@@ -675,9 +733,14 @@ Nella nuova schermata, cliccare sul pulsante Installa.
 \end_layout
 
 \begin_layout Itemize
-Comparirà una schermata con sfondo bianco con tutti i pacchetti di installazione
+Comparirà una schermata con l'elenco di tutti i pacchetti di installazione
  in ordine alfabetico.
- Aspettare il termine di tutte le installazioni.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Aspettare il termine di tutte le installazioni.
 \end_layout
 
 \begin_deeper
@@ -686,15 +749,15 @@ L 'operazione può richiedere anche un'ora.
 \end_layout
 
 \end_deeper
+\end_deeper
 \begin_layout Itemize
 Ad installazione completata, cliccare sul pulsante Fine.
- Sulla schermata a sfondo nera e scritte bianche, premere un tasto qualsiasi
- per terminare 
+ Sul prompt dei comandi, premere un tasto qualsiasi per terminare 
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Le finestre si chiuderanno automaticamente.
+Entrambe le finestre si chiuderanno automaticamente.
  
 \end_layout
 
@@ -709,7 +772,7 @@ Le finestre si chiuderanno automaticamente.
 status open
 
 \begin_layout Plain Layout
-Windows (opzionale)
+Windows (Aggiornamento opzionale)
 \end_layout
 
 \end_inset
@@ -718,22 +781,43 @@ Windows (opzionale)
 \end_layout
 
 \begin_deeper
-\begin_layout Standard
-Aggiornamento
-\end_layout
-
 \begin_layout Itemize
 È necessaria una connessione internet per tutta la durata del processo di
  aggiornamento.
 \end_layout
 
 \begin_layout Itemize
-Su Windows 7: cliccare su START di WINDOWS --> Tutti i programmi --> Tex
- Live 2014 --> TeX Live Manager 2014.
- Su Windows 8 e 8.1: cliccare su START di WINDOWS, poi digitare sulla tastiera
- Tex Live Manager ed infine premere il tasto INVIO della tastiera.
+Aprire Tex Live Manager 
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Su Windows 7: cliccare su START di WINDOWS 
+\begin_inset Formula $\to$
+\end_inset
+
+ Tutti i programmi 
+\begin_inset Formula $\to$
+\end_inset
+
+ Tex Live 2014 
+\begin_inset Formula $\to$
+\end_inset
+
+ TeX Live Manager 2014.
+ 
+\end_layout
+
+\begin_layout Itemize
+Su Windows 8 / 8.1: cliccare su START di WINDOWS, poi digitare sulla tastiera
+ 
+\emph on
+Tex Live Manager
+\emph default
+ ed infine premere il tasto INVIO.
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 Nella finestra che si apre, cliccare sul pulsante Seleziona tutti (tutti
  i pacchetti in lista mostreranno al lato il segno di spunta).
@@ -743,9 +827,15 @@ Nella finestra che si apre, cliccare sul pulsante Seleziona tutti (tutti
 Cliccare sul pulsante Aggiorna.
  Nella finestra di dialogo compariranno le informazioni sullo stato dei
  pacchetti in aggiornamento in ordine alfabetico.
- L'operazione di aggiornamento può richiedere parecchio tempo.
+ 
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+L'operazione di aggiornamento può richiedere parecchio tempo.
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 Al termine del processo, chiudere la finestra.
  
@@ -781,6 +871,65 @@ MacOS deve morire male e questa parte la scriverà qualcun altro.
 
 \begin_layout Section*
 Appendice
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Problemi?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+Google is your friend!
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align block
+LaTeX è un sistema molto diffuso.
+ Nel caso incontriate problemi durante l'installazione o l'utilizzo di questo
+ ambiente, la probabilità che troviate la soluzione già pronta online è
+ molto alta.
+ 
+\end_layout
+
+\begin_layout Standard
+\align block
+Una risorsa sopra tutte:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://tex.stackexchange.com/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
 \end_layout
 
 \begin_layout Frame
@@ -909,25 +1058,6 @@ Grazie per la collaborazione!
 \end_layout
 
 \begin_layout Frame
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Se volete cambiare licenza cambiate l'immagine e la scritta sotto
-\end_layout
-
-\begin_layout Plain Layout
-si consiglia di consultare http://creativecommons.org/ e http://creativecommons.or
-g/about/downloads per le immagini (possibilmente vettoriali)
-\end_layout
-
-\begin_layout Plain Layout
-ricordate di configurare inkscape per le immagini vettoriali (se non lo
- avete già fatto - e voi lo avete già fatto, vero?!)
-\end_layout
-
-\end_inset
-
 
 \end_layout
 
