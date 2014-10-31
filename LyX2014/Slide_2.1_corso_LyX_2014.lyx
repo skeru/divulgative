@@ -1,0 +1,2137 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usetheme{Madrid}
+\usefonttheme{serif}
+% \usecolotheme{crane} %GIALLA
+% more colors & themes http://www.hartwork.org/beamer-theme-matrix/
+
+\setbeamercovered{transparent}
+% transizioni: gli elementi nascosti vengono visualizzati in trasparenza
+
+%\beamerdefaultoverlayspecification{<+->}
+% transizioni: di default i paragrafi e gli elenchi (puntati e numerati) vengono scoperti passo per passo.
+% usate con cautela
+
+\usenavigationsymbolstemplate{}
+% hide navigation symbols (bottom-right corner in every slide)
+
+\titlegraphic{\includegraphics[height=2cm]{poul-logo.pdf}}
+% Aggiunge il logo del POuL in prima pagina
+% Ricordate che dovete sempre avere il logo in pdf nella cartella dove avete il documento (poul-logo.pdf)
+
+\IfFileExists{lmodern.sty}{\usepackage{lmodern}}{}
+% sets nice fonts (if available)
+
+% inserisce AUTOMATICAMENTE una slide di titolo sezione all'inizio di OGNI sezione: in questa slide viene visualizzato l'indice delle sezioni, evidenziata quella corrente.
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>
+    \frametitle{Sezione \thesection}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+% ridefinisce il footer per evitare di includere \institute tra () accanto al nome
+% LyX 2.1 pare abbia risolto questo bug. Lascio questo codice commentato, rimane utile per nascondere forzatamente \institute dal pedice nel caso si desiderasse aggiungerlo in seguito
+% fonte: http://tex.stackexchange.com/questions/35166/how-can-i-remove-the-institute-from-the-author-footline-on-beamer
+%\setbeamertemplate{footline}
+%{
+%  \leavevmode%
+%  \hbox{%
+%  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+%    \usebeamerfont{author in head/foot}\insertshortauthor%~~\beamer@ifempty{\insertshortinstitute}{}{(\insertshortinstitute)}
+ % \end{beamercolorbox}%
+ % \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+%    \usebeamerfont{title in head/foot}\insertshorttitle
+%  \end{beamercolorbox}%
+%  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+%    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+%    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+%  \end{beamercolorbox}}%
+%  \vskip0pt%
+%}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language italian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Andate in 
+\end_layout
+
+\begin_layout Plain Layout
+
+\bar under
+D
+\bar default
+ocumento -> Imposta
+\bar under
+z
+\bar default
+ioni -> Preambolo di LaTeX 
+\end_layout
+
+\begin_layout Plain Layout
+per dare un occhio ad un po' di opzioni.
+ FATELO.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Appunti, Tesi e Presentazioni con LyX
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Corso LyX 2014
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subtitle
+edizione 2014
+\end_layout
+
+\begin_layout Author
+Stefano Cherubin
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+href{mailto:nevertrustpdflinks@mailinator.com}{
+\backslash
+nolinkurl{stefano1.cherubin@mail.polimi.it}}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Stefano Cherubin
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Date
+Introduzione a LyX
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Introduzione
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Perché siete qui
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+i pacchetti office vi stanno stretti
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+LaTeX 
+\emph on
+as it is
+\emph default
+ non è user friendly
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Section
+Di cosa stiamo parlando?
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+LyX come Document Editor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Definizione
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Strumento software per redigere materiale stampabile
+\end_layout
+
+\end_deeper
+\begin_layout ExampleBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Cosa posso redigere in LyX?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Articoli
+\end_layout
+
+\begin_layout Itemize
+Libri
+\end_layout
+
+\begin_layout Itemize
+Tesi
+\end_layout
+
+\begin_layout Itemize
+Presentazioni
+\end_layout
+
+\begin_layout Itemize
+Curriculum Vitae
+\end_layout
+
+\begin_layout Itemize
+...
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+È pensato per documenti scientifici.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Cosa non è
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Non è un pacchetto office
+\end_layout
+
+\begin_layout Itemize
+Non è un word processor
+\end_layout
+
+\begin_layout Itemize
+Non è un ambiente di sviluppo
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Formati
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+input
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+.lyx
+\end_layout
+
+\begin_layout Standard
+con possibilità di importare anche tabelle .csv e codice LaTeX
+\end_layout
+
+\end_deeper
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+output
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+PDF
+\end_layout
+
+\begin_layout Itemize
+PS
+\end_layout
+
+\begin_layout Itemize
+DVI
+\end_layout
+
+\begin_layout Itemize
+HTML
+\end_layout
+
+\begin_layout Itemize
+LaTeX
+\end_layout
+
+\begin_layout Itemize
+...
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+What you see...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename types_of_editors.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset CommandInset citation
+LatexCommand cite
+key "image:xkcd:types_of_editors"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+WYSIWYM
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+What You See Is What You 
+\series bold
+Mean
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Section
+La magia nera dietro questo editor
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Magia bianca
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+La magia che sta dietro a LyX si chiama LaTeX 
+\begin_inset Newline newline
+\end_inset
+
+(e non è una cosa cattiva)
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Cos'è LaTeX
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Linguaggio di marcatura per documenti
+\end_layout
+
+\begin_layout Itemize
+Document preparation system
+\end_layout
+
+\end_deeper
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+inoltre
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Standard de facto
+\end_layout
+
+\begin_layout Itemize
+Progetto open source
+\end_layout
+
+\begin_layout Itemize
+Cross-platform
+\end_layout
+
+\begin_layout Itemize
+Modulare
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Per approfondire 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "website:LaTeX,wiki:LaTeX,wiki:TeX"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+La bacchetta magica
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Per usare questa magia...
+ ci vuole uno strumento
+\end_layout
+
+\begin_layout Itemize
+framework LaTeX
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+LyX è pensato per concedere la potenza di LaTeX senza averne direttamente
+ a che fare
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+in un mondo ideale
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Schema
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+Utente 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ LyX 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ framework LaTeX 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ risultato
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Section
+Vantaggi
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Perché prendere appunti in formato digitale
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Niente carta, niente inchiostro
+\end_layout
+
+\begin_layout Itemize
+Facile inserire - modificare - cancellare - riordinare porzioni di documento
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+Ctrl + F
+\family default
+ è decisamente più rapido di sfogliare quaderni
+\end_layout
+
+\begin_layout Itemize
+Controllo ortografico grammaticale
+\end_layout
+
+\begin_layout Itemize
+Font leggibile
+\end_layout
+
+\begin_layout Itemize
+...
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Perché iniziare a usare LyX
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Interfaccia semplice
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Ricorda un word processor
+\end_layout
+
+\end_deeper
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Risultati professionali con pochissimo sforzo
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+LaTeX si occupa dell'impaginazione
+\end_layout
+
+\begin_layout Itemize
+Viene automatizzata anche la gestione di indici e bibliografia
+\end_layout
+
+\end_deeper
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Editor di 
+\series bold
+formule
+\series default
+ integrato ed intuitivo
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Vi forniamo un template per scrivere la tesi
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Perché non smettere di usarlo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Shortcut per qualsiasi cosa
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Riduce di molto i tempi di redazione dei documenti
+\end_layout
+
+\end_deeper
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Un software per diversi tipi di documento
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Modulare, come LaTeX
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Possibilità di inserire blocchi di codice LaTeX direttamente nel file .lyx
+\end_layout
+
+\end_deeper
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Output in diversi formati
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Section
+Demo
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Abbiamo parlato troppo...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+LyX è uno di quei programmi dove c'è poco da dire e molto da provare quindi...
+\end_layout
+
+\begin_layout Standard
+\align center
+Facciamo pratica!
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Versione di riferimento
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+Ci baseremo sulla versione 
+\series bold
+2.1
+\end_layout
+
+\begin_layout Standard
+Rilascio ufficiale: 25 aprile 2014
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Da notare nell'editor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Menù 
+\bar under
+D
+\bar default
+ocumento
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\bar under
+D
+\bar default
+ocumento > Imposta
+\bar under
+z
+\bar default
+ioni sarà molto utile
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Menù 
+\bar under
+N
+\bar default
+aviga
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Permette di esplorare la struttura e navigare rapidamente nel documento
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Layout (menù a tendina nella barra degli strumenti)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Consente di impostare il livello semantico del paragrafo corrente
+\end_layout
+
+\begin_layout Itemize
+Shortcut 
+\family typewriter
+Alt + P
+\family default
+ seguito dal codice del layout desiderato
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\family typewriter
+Alt + P spacebar
+\family default
+ consente di eseguire una ricerca nel menù digitando il nome del layout
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Generare un documento
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Mostra
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Crea il documento nel formato di default (PDF) 
+\begin_inset space \hfill{}
+\end_inset
+
+ 
+\family typewriter
+Ctrl + R
+\end_layout
+
+\begin_layout Itemize
+Lancia una compilazione completa del documento
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Aggiorna
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Funziona solo a documento già creato 
+\begin_inset space \hfill{}
+\end_inset
+
+ 
+\family typewriter
+Ctrl + Shift + R
+\end_layout
+
+\begin_layout Itemize
+Sovrascrive l'ultimo documento generato, si possono vedere le modifiche
+ 
+\begin_inset Quotes fld
+\end_inset
+
+al volo
+\begin_inset Quotes frd
+\end_inset
+
+ se il file è già aperto
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Mostra / Aggiorna altri formati
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Per gestire i formati di output non di default
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Spaziatura
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Normalmente 
+\series bold
+è proibito
+\series default
+ inserire:
+\end_layout
+
+\begin_layout Itemize
+spaziatura multipla
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Spaziatura senza interruzione 
+\begin_inset space \hfill{}
+\end_inset
+
+
+\family typewriter
+Ctrl + spacebar
+\end_layout
+
+\begin_layout Itemize
+
+\bar under
+I
+\bar default
+nserisci > Formatta
+\bar under
+z
+\bar default
+ione > Spazi
+\bar under
+o
+\bar default
+ orizzontale...
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Spazio tra parole
+\end_layout
+
+\begin_layout Itemize
+Quadratoni
+\end_layout
+
+\begin_layout Itemize
+Riempimento orizzontale
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+a capo multipli
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\bar under
+I
+\bar default
+nserisci > Formatta
+\bar under
+z
+\bar default
+ione > Spazio 
+\bar under
+v
+\bar default
+erticale...
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Salto predefinito, piccolo, medio, grande
+\end_layout
+
+\begin_layout Itemize
+Riempimento verticale
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Formattazione del testo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Modificatori di testo
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+si consiglia si non abusarne
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Grassetto (bold) 
+\begin_inset space \hfill{}
+\end_inset
+
+
+\family typewriter
+Ctrl + B
+\end_layout
+
+\begin_layout Itemize
+Inclinato (enfasi) 
+\begin_inset space \hfill{}
+\end_inset
+
+
+\family typewriter
+Ctrl + E
+\end_layout
+
+\begin_layout Itemize
+Sottolineato (underlined) 
+\begin_inset space \hfill{}
+\end_inset
+
+
+\family typewriter
+Ctrl + U
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Allineamento
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Menù contestuale (tasto destro) > Impostazioni paragrafo...
+\end_layout
+
+\begin_layout Itemize
+Si consiglia di impostare shortcut personalizzati
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\family typewriter
+Alt + A #codiceAllineamento
+\family default
+ fa conflitto con il menù 
+\bar under
+A
+\bar default
+iuto
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Layout
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Definizione 
+\begin_inset space \hfill{}
+\end_inset
+
+
+\family typewriter
+Alt + P D
+\end_layout
+
+\begin_layout Itemize
+Elenco puntato (bullet list) 
+\begin_inset space \hfill{}
+\end_inset
+
+
+\family typewriter
+Alt + P B
+\end_layout
+
+\begin_layout Itemize
+Elenco numerato (numbered list) 
+\begin_inset space \hfill{}
+\end_inset
+
+
+\family typewriter
+Alt + P N
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Indici
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Indice Generale
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\bar under
+I
+\bar default
+nserisci > Elenco / 
+\bar under
+I
+\bar default
+ndice generale > Indice 
+\bar under
+g
+\bar default
+enerale
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Sono inoltre disponibili:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Elenco delle figure
+\end_layout
+
+\begin_layout Itemize
+Elenco delle tabelle
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Possono essere inseriti una volta sola
+\end_layout
+
+\begin_layout Itemize
+In automatico vengono creati ed aggiornati
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+in automatico viene aggiunta anche l'intestazione 
+\begin_inset Quotes fld
+\end_inset
+
+Indice generale
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+Elenco delle figure
+\begin_inset Quotes frd
+\end_inset
+
+, ...
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Scorciatoie personalizzate
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Strumenti > Preferenze > Redazione
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Ricerca di shortcut esistenti
+\end_layout
+
+\begin_layout Itemize
+Definizione di nuovi shortcut
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Permanenti in LyX e non limitati al singolo documento
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Modalità matematica
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\family typewriter
+Ctrl + M
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Per inserire la formula al centro della pagina 
+\begin_inset space \hfill{}
+\end_inset
+
+ 
+\family typewriter
+Ctrl + Shift + M
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Trovate TUTTE le funzionalità disponibili nelle barre in basso
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+I relativi shortcut compaiono passandoci sopra con il mouse
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\family typewriter
+
+\backslash
+ 
+\family default
+consente di usare la tastiera per TUTTI i simboli digitandone il nome
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\Delta$
+\end_inset
+
+ 
+\begin_inset space \hfill{}
+\end_inset
+
+ 
+\family typewriter
+
+\backslash
+Delta
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\delta$
+\end_inset
+
+ 
+\begin_inset space \hfill{}
+\end_inset
+
+ 
+\family typewriter
+
+\backslash
+delta
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ 
+\begin_inset space \hfill{}
+\end_inset
+
+ 
+\family typewriter
+
+\backslash
+rightarrow
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Etichette e riferimenti
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Etichetta
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Consente di creare un punto a cui fare di riferimento
+\end_layout
+
+\begin_layout Itemize
+Può essere una figura, una tabella, un titolo di sezione, ...
+\end_layout
+
+\begin_layout Itemize
+
+\bar under
+I
+\bar default
+nserisci > 
+\bar under
+E
+\bar default
+tichetta...
+\end_layout
+
+\end_deeper
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Riferimenti
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+Rimandano ad una etichetta
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Disponibili in vari formati (numerello tra parentesi tonde, nome sezione,
+ ...)
+\end_layout
+
+\begin_layout Itemize
+
+\bar under
+I
+\bar default
+nserisci > 
+\bar under
+R
+\bar default
+iferimento...
+\end_layout
+
+\end_deeper
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Itemize
+Le citazioni vanno trattate come caso a parte
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+ne discuteremo nell'ultimo talk
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Section
+Appendice
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Help
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+LyX wiki 
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://wiki.lyx.org/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+stackexchange per LaTeX 
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://tex.stackexchange.com/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Problemi legati alle impostazioni di lingua
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout AlertBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Sillabazione non corretta
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Va a capo nei punti sbagliati
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Configura correttamente la lingua del documento.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout AlertBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Package babel Error
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\family typewriter
+\emph on
+Package babel Error: You haven't specified a language option
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Seleziona una lingua nelle impostazioni documento.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\family typewriter
+\emph on
+Package babel Error: Unknown option `Italian'
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Pacchetto per la lingua italiana non è installato.
+ Installatelo.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Problemi legati ai font
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout AlertBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Bad Fonts
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+I font vengono visualizzati male nel pdf in output
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Il supporto ai font è stato migliorato in LyX 2.1 tuttavia in caso di problemi,
+ la questione è discussa nelle FAQ
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://wiki.lyx.org/FAQ/PDF
+\backslash
+#badFonts
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Altri problemi comuni
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout AlertBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Riferimenti ipertestuali
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Si desidera avere i riferimenti cliccabili come link ipertestuali
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\bar under
+D
+\bar default
+ocumento > Imposta
+\bar under
+z
+\bar default
+ioni > Proprietà pdf > Modifica supporto hyperref
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout AlertBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Immagini vettoriali
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Le immagini vettoriali non vengono visualizzate bene
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Usa inkscape
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://wiki.lyx.org/Tips/UseInkscapeSVGImages
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Fonti
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "ref"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Section*
+Licenza
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Fine
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+
+\size largest
+Grazie per l'attenzione!
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename by-sa.svg
+	height 0.9cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size footnotesize
+Queste slides sono licenziate Creative Commons Attribution-ShareAlike 4.0
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.poul.org
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
