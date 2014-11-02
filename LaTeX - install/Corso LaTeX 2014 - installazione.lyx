@@ -860,18 +860,27 @@ MacOS
 \end_layout
 
 \begin_deeper
-\begin_layout Standard
-Esiste una versione anche per il mondo Apple, si vedano i dettagli alla
- pagina 
+\begin_layout Itemize
+Esiste una versione anche per il mondo Apple
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+alla pagina 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "enu:mactex"
 
 \end_inset
 
-
+ è disponibile un file di installazione .pkg
 \end_layout
 
+\begin_layout Itemize
+seguite l'installazione guidata passo per passo.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Separator
 
