@@ -1,0 +1,987 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usetheme{Madrid}
+\usefonttheme{serif}
+% \usecolortheme{crane}
+% Decommentate se la volete GIALLA
+% http://www.hartwork.org/beamer-theme-matrix/ per esempi di temi e colori
+
+%ridefinisce il footer per evitare di includere \institute tra () accanto al nome
+% http://tex.stackexchange.com/questions/35166/how-can-i-remove-the-institute-from-the-author-footline-on-beamer
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor%~~\beamer@ifempty{\insertshortinstitute}{}{(\insertshortinstitute)}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+% hide navigation symbols in the bottom-right corner
+\usenavigationsymbolstemplate{}
+
+% set fonts for nicer pdf view
+\IfFileExists{lmodern.sty}{\usepackage{lmodern}}{}
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+\titlegraphic{\includegraphics[height=2cm]{poul-logo.pdf}}
+% Ricordate che dovete sempre avere il logo in pdf nella cartella dove avete il documento
+
+\usepackage{url}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Andate in Documento -> Impostazioni -> Preambolo di LaTeX per dare un occhio
+ ad alcune opzioni
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Appunti, Tesi e Presentazioni con LyX
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Corso LyX 2015
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subtitle
+edizione 2015
+\end_layout
+
+\begin_layout Author
+Stefano Cherubin
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+href{mailto:nevertrustpdflinks@mailinator.com}{
+\backslash
+nolinkurl{stefano 1 .
+ cherubin @ mail .
+ polimi .
+ it}}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Stefano Cherubin
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Lo so è un pò brutto, ma non ho trovato di meglio per far vedere autore
+ e mail con link mailto funzionante nella prima pagina.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Date
+Prima di venire in aula
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Preparazione al corso
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+If you wish to uncover everything in a step-wise fashion, uncomment the
+ following command:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+beamerdefaultoverlayspecification{<+->}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Structuring a talk is a difficult task and the following structure may not
+ be suitable.
+ Here are some rules that apply for this solution: 
+\end_layout
+
+\begin_layout Itemize
+Exactly two or three sections (other than the summary).
+ 
+\end_layout
+
+\begin_layout Itemize
+At *most* three subsections per section.
+ 
+\end_layout
+
+\begin_layout Itemize
+Talk about 30s to 2min per frame.
+ So there should be between about 15 and 30 frames, all told.
+\end_layout
+
+\begin_layout Itemize
+A conference audience is likely to know very little of what you are going
+ to talk about.
+ So *simplify*! 
+\end_layout
+
+\begin_layout Itemize
+In a 20min talk, getting the main ideas across is hard enough.
+ Leave out details, even if it means being less precise than you think necessary.
+ 
+\end_layout
+
+\begin_layout Itemize
+If you omit details that are vital to the proof/implementation, just say
+ so once.
+ Everybody will be happy with that.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Welcome
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Room <to be defined>
+\end_layout
+
+\begin_layout Description
+Date 14/04/2015 
+\begin_inset space \quad{}
+\end_inset
+
+ 21/04/2015
+\begin_inset space \quad{}
+\end_inset
+
+ 12/05/2015
+\end_layout
+
+\begin_layout Description
+Time 16:20 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ 18:20
+\end_layout
+
+\begin_layout Standard
+\align center
+The entire talk will be held in 
+\series bold
+italian
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\align block
+L'evento è organizzato dagli studenti dell'associazione POuL (Politecnico
+ Open unix Labs) ed è interamente finanziato dal Politecnico di Milano.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Di cosa si parlerà
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+
+\size footnotesize
+la scaletta dettagliata è disponibile all'indirizzo
+\size default
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.poul.org/2015/04/corso-lyx-2015/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align block
+
+\size footnotesize
+Lo scopo dell'evento è l'introduzione all'uso dell'editor di documenti LyX.
+ Non sono richieste particolari conoscenze preliminari.
+ Verranno inoltre presentati cenni di LaTeX, giusto il necessario per poter
+ utilizzare al meglio LyX.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+
+\size footnotesize
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Giorno 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size footnotesize
+Introduzione a LyX
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Oltre gli appunti: LyX per le presentazioni e altri documenti
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\size footnotesize
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+
+\size footnotesize
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Giorno 2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size footnotesize
+Funzionalità matematiche avanzate
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+grafici con xypic, tikz 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\size footnotesize
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+
+\size footnotesize
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Giorno 3
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size footnotesize
+LyX per la tesi: presentazione di un template
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Questions & Answers, dimostrazione pratica
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Logistica
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+L'evento è 
+\series bold
+gratuito
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\emph on
+Non è richiesta alcuna registrazione
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+\align block
+La parte pratica sarà centrale.
+ 
+\bar under
+Avere con sé un computer
+\bar default
+ per provare quanto verrà mostrato 
+\bar under
+è consigliato ma non obbligatorio
+\bar default
+.
+ L'aula assegnata fornisce prese di corrente ai banchi.
+\end_layout
+
+\begin_layout Standard
+\align center
+La durata prevista di ogni incontro è di circa 2 ore.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Compiti per casa
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align block
+Vi chiediamo di installare l'ambiente LyX / LaTeX prima di presentarvi in
+ aula.
+\end_layout
+
+\begin_layout Standard
+\align center
+Perché?
+\end_layout
+
+\begin_layout Standard
+\align block
+Perché l'installazione richiede il download di pacchetti 
+\begin_inset Quotes eld
+\end_inset
+
+pesanti
+\begin_inset Quotes erd
+\end_inset
+
+ e non possiamo garantire che la rete wi-fi disponibile in aula consenta
+ una installazione rapida durante l'evento.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Quale versione?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+In questo corso useremo come riferimento 
+\series bold
+LyX 2.1
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align block
+Questa versione è stata pubblicata il 25 Aprile 2014.
+ Esiste la possibilità che per alcune distribuzioni di GNU/Linux particolarmente
+ conservative
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+ad esempio: Debian, Ubuntu
+\end_layout
+
+\end_inset
+
+ non sia ancora disponibile questa versione nei repository ufficiali.
+ 
+\end_layout
+
+\begin_layout Standard
+\align block
+Nelle successive slide segue una spiegazione dettagliata.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Aiutino (1/3)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+Ommioddio cosa devo fare?
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Scarica e installa una distribuzione LaTeX per il tuo sistema operativo
+ (a meno che non ne abbia già installata una)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+GNU/Linux -> TeXlive
+\end_layout
+
+\begin_layout Itemize
+Windows
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+per Windows esiste la possibilità di scaricare il 
+\emph on
+bundle
+\emph default
+ che contiene LyX più una distribuzione LaTeX, in un unico eseguibile
+\end_layout
+
+\end_inset
+
+ -> MiKTeX oppure TeXlive
+\end_layout
+
+\begin_layout Itemize
+MacOS -> MacTeX
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Aiutino (2/3)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ExampleBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Opzionale
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align block
+Per utilizzare al meglio in LyX le immagini vettoriali si consiglia di installar
+e anche Inkscape
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.inkscape.org/it/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\align block
+Si tratta del più conosciuto ed apprezzato editor open source di immagini
+ vettoriali.
+ Con esso LyX avrà un ottimo supporto di immagini SVG e altri formati vettoriali.
+\end_layout
+
+\begin_layout Standard
+\align block
+Nel caso si desiderasse utilizzare queste funzionalità si consiglia di installar
+e prima Inkscape e poi LyX: si potrà così risparmiare noiosi minuti di riconfigu
+razione.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Aiutino (3/3)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Scarica e installa LyX 2.1
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+(per Win/Mac) dal sito ufficiale
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.lyx.org/Download
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+(per le distribuzioni GNU/Linux basate su Ubuntu) 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+se necessario, aggiungere il repository LyX ufficiale
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://launchpad.net/~lyx-devel/+archive/release
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ all'elenco delle sorgenti software conosciute per accedere alla versione
+ più recente; 
+\end_layout
+
+\begin_layout Itemize
+installare
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+sudo apt-get install lyx
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+...e come ultima cosa
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+Controlla che LyX si avvii senza errori.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Ci vediamo in aula!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+
+\size largest
+Grazie per la collaborazione!
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename by-sa.svg
+	height 0.9cm
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\size footnotesize
+Queste slides sono licenziate Creative Commons Attribution-ShareAlike 4.0
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.poul.org
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
